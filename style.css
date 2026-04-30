@@ -124,6 +124,7 @@ body {
 /* Artikel */
 .articles {
   padding: 40px 20px;
+  overflow: visible;
 }
 
 .articles h2 {
@@ -141,7 +142,6 @@ body {
   max-width: 300px;
 }
 
-/* HAMBURGER */
 .menuToggle {
   display: none;
   font-size: 1.8rem;
@@ -150,54 +150,60 @@ body {
 }
 
 /* MOBILE */
-@media (max-width: 768px) {
+@media (max-width: 768px) { 
+.navbar {
+  flex-direction: row;
+  padding: 20px;
+} 
 
-  .navbar {
-    flex-direction: row;
-    padding: 20px;
-  }
+.menuToggle {
+  display: block;
+} 
 
-  .menuToggle {
-    display: block;
-  }
+.navbarGroup {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background-color: #131312;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+} 
 
-  .navbarGroup {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background-color: #131312;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+.navbarGroup.active {
+  max-height: 300px;
+  padding: 20px 0;
+} 
 
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
+.navbarText {
+  padding: 10px 0;
+} 
 
-  .navbarGroup.active {
-    max-height: 300px;
-    padding: 20px 0;
-  }
+.tentangContainer {
+  flex-direction: column;
+  text-align: center;
+} 
 
-  .navbarText {
-    padding: 10px 0;
-  }
+.tentang p {
+  text-align: center;
+  padding: 0 20px;
+} 
 
-  /* Tentang jadi stack */
-  .tentangContainer {
-    flex-direction: column;
-    text-align: center;
-  }
+.fotoProfil {
+  width: 180px;
+  margin: auto;
+} 
 
-  .tentang p {
-    text-align: center;
-    padding: 0 20px;
-  }
-
-  .fotoProfil {
-    width: 180px;
-    margin: auto;
-  }
+.articlesGrid { 
+  flex-direction: column;
+  align-items: center; 
+} 
+.articlesGrid .card {
+  width: 90%; 
+  max-width: 400px; 
+  } 
 }
