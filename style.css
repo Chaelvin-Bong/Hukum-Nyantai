@@ -72,7 +72,7 @@ body {
   padding: 10px 20px;
 }
 
-.tentang h1 {
+.tentang h2 {
   font-size: clamp(1.8rem, 5vw, 3rem);
   margin-bottom: 10px;
 }
